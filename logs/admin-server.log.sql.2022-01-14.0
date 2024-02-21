@@ -1,0 +1,172 @@
+2022-01-14 12:03:27,846 [http-nio-8088-exec-7] ==>  Preparing: select * from sys_user where username = ? 
+2022-01-14 12:03:28,062 [http-nio-8088-exec-7] ==> Parameters: 1144203767@qq.com(String)
+2022-01-14 12:03:28,273 [http-nio-8088-exec-7] <==      Total: 1
+2022-01-14 12:03:28,634 [http-nio-8088-exec-7] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2022-01-14 12:03:28,639 [http-nio-8088-exec-7] ==> Parameters: 6(Long)
+2022-01-14 12:03:28,728 [http-nio-8088-exec-7] <==      Total: 0
+2022-01-14 12:03:29,884 [http-nio-8088-exec-7] ==>  Preparing: update sys_user SET allowAt = ?, errorNum = ? where id = ? 
+2022-01-14 12:03:29,891 [http-nio-8088-exec-7] ==> Parameters: 2022-01-14 12:03:29.119(Timestamp), 0(Integer), 6(Long)
+2022-01-14 12:03:30,149 [http-nio-8088-exec-7] <==    Updates: 1
+2022-01-14 12:04:18,385 [http-nio-8088-exec-8] ==>  Preparing: select * from sys_user where username = ? 
+2022-01-14 12:04:18,399 [http-nio-8088-exec-8] ==> Parameters: 1144203767@qq.com(String)
+2022-01-14 12:04:18,478 [http-nio-8088-exec-8] <==      Total: 1
+2022-01-14 12:04:18,497 [http-nio-8088-exec-8] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2022-01-14 12:04:18,499 [http-nio-8088-exec-8] ==> Parameters: 6(Long)
+2022-01-14 12:04:18,507 [http-nio-8088-exec-8] <==      Total: 0
+2022-01-14 12:04:18,762 [http-nio-8088-exec-8] ==>  Preparing: update sys_user SET allowAt = ?, errorNum = ? where id = ? 
+2022-01-14 12:04:18,766 [http-nio-8088-exec-8] ==> Parameters: 2022-01-14 12:04:18.76(Timestamp), 0(Integer), 6(Long)
+2022-01-14 12:04:18,803 [http-nio-8088-exec-8] <==    Updates: 1
+2022-01-14 12:04:19,153 [http-nio-8088-exec-8] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-14 12:04:19,177 [http-nio-8088-exec-8] ==> Parameters: 6(Long), 登陆(String), true(Boolean), null
+2022-01-14 12:04:19,359 [http-nio-8088-exec-8] <==    Updates: 1
+2022-01-14 12:04:43,134 [http-nio-8088-exec-6] ==>  Preparing: select count(1) from historicalResults WHERE userId = ? 
+2022-01-14 12:04:43,139 [http-nio-8088-exec-6] ==> Parameters: 6(Long)
+2022-01-14 12:04:44,213 [http-nio-8088-exec-6] <==      Total: 1
+2022-01-14 12:04:44,534 [http-nio-8088-exec-6] ==>  Preparing: select top 10 * from historicalResults where id not in (select top (0 * 10) id from historicalResults where userId = ? order by id desc) and userId = ? order by id desc 
+2022-01-14 12:04:44,538 [http-nio-8088-exec-6] ==> Parameters: 6(Long), 6(Long)
+2022-01-14 12:04:46,655 [http-nio-8088-exec-6] <==      Total: 3
+2022-01-14 14:07:18,178 [http-nio-8088-exec-3] ==>  Preparing: select * from sys_user where username = ? 
+2022-01-14 14:07:18,180 [http-nio-8088-exec-3] ==> Parameters: 1144203767@qq.com(String)
+2022-01-14 14:07:18,190 [http-nio-8088-exec-3] <==      Total: 1
+2022-01-14 14:07:18,196 [http-nio-8088-exec-3] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2022-01-14 14:07:18,198 [http-nio-8088-exec-3] ==> Parameters: 6(Long)
+2022-01-14 14:07:18,202 [http-nio-8088-exec-3] <==      Total: 0
+2022-01-14 14:07:18,444 [http-nio-8088-exec-3] ==>  Preparing: update sys_user SET allowAt = ?, errorNum = ? where id = ? 
+2022-01-14 14:07:18,446 [http-nio-8088-exec-3] ==> Parameters: 2022-01-14 14:07:18.441(Timestamp), 0(Integer), 6(Long)
+2022-01-14 14:07:18,451 [http-nio-8088-exec-3] <==    Updates: 1
+2022-01-14 14:07:18,464 [http-nio-8088-exec-3] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-14 14:07:18,472 [http-nio-8088-exec-3] ==> Parameters: 6(Long), 登陆(String), true(Boolean), null
+2022-01-14 14:07:18,563 [http-nio-8088-exec-3] <==    Updates: 1
+2022-01-14 14:07:34,865 [http-nio-8088-exec-2] ==>  Preparing: select count(1) from historicalResults WHERE userId = ? 
+2022-01-14 14:07:34,867 [http-nio-8088-exec-2] ==> Parameters: 6(Long)
+2022-01-14 14:07:34,974 [http-nio-8088-exec-2] <==      Total: 1
+2022-01-14 14:07:35,115 [http-nio-8088-exec-2] ==>  Preparing: select top 1 * from historicalResults where id not in (select top (0 * 1) id from historicalResults where userId = ? order by id desc) and userId = ? order by id desc 
+2022-01-14 14:07:35,117 [http-nio-8088-exec-2] ==> Parameters: 6(Long), 6(Long)
+2022-01-14 14:07:35,384 [http-nio-8088-exec-2] <==      Total: 1
+2022-01-14 14:08:06,678 [http-nio-8088-exec-1] ==>  Preparing: select count(1) from historicalResults WHERE userId = ? 
+2022-01-14 14:08:06,680 [http-nio-8088-exec-1] ==> Parameters: 6(Long)
+2022-01-14 14:08:06,689 [http-nio-8088-exec-1] <==      Total: 1
+2022-01-14 14:08:06,696 [http-nio-8088-exec-1] ==>  Preparing: select top 1 * from historicalResults where id not in (select top (1 * 1) id from historicalResults where userId = ? order by id desc) and userId = ? order by id desc 
+2022-01-14 14:08:06,704 [http-nio-8088-exec-1] ==> Parameters: 6(Long), 6(Long)
+2022-01-14 14:08:06,829 [http-nio-8088-exec-1] <==      Total: 1
+2022-01-14 14:08:28,068 [http-nio-8088-exec-10] ==>  Preparing: select count(1) from historicalResults WHERE userId = ? 
+2022-01-14 14:08:28,071 [http-nio-8088-exec-10] ==> Parameters: 6(Long)
+2022-01-14 14:08:28,111 [http-nio-8088-exec-10] <==      Total: 1
+2022-01-14 14:08:28,136 [http-nio-8088-exec-10] ==>  Preparing: select top 1 * from historicalResults where id not in (select top (2 * 1) id from historicalResults where userId = ? order by id desc) and userId = ? order by id desc 
+2022-01-14 14:08:28,138 [http-nio-8088-exec-10] ==> Parameters: 6(Long), 6(Long)
+2022-01-14 14:08:28,294 [http-nio-8088-exec-10] <==      Total: 1
+2022-01-14 14:11:58,204 [http-nio-8088-exec-10] ==>  Preparing: select count(1) from historicalResults WHERE userId = ? 
+2022-01-14 14:11:59,464 [http-nio-8088-exec-10] ==> Parameters: 6(Long)
+2022-01-14 14:11:59,666 [http-nio-8088-exec-10] <==      Total: 1
+2022-01-14 14:11:59,868 [http-nio-8088-exec-10] ==>  Preparing: select top 1 * from historicalResults where id not in (select top (2 * 1) id from historicalResults WHERE userId = ? order by id desc) and userId = ? order by id desc 
+2022-01-14 14:11:59,870 [http-nio-8088-exec-10] ==> Parameters: 6(Long), 6(Long)
+2022-01-14 14:11:59,967 [http-nio-8088-exec-10] <==      Total: 1
+2022-01-14 14:12:33,059 [http-nio-8088-exec-9] ==>  Preparing: select count(1) from historicalResults WHERE userId = ? 
+2022-01-14 14:12:33,062 [http-nio-8088-exec-9] ==> Parameters: 6(Long)
+2022-01-14 14:12:33,083 [http-nio-8088-exec-9] <==      Total: 1
+2022-01-14 14:12:33,126 [http-nio-8088-exec-9] ==>  Preparing: select top 1 * from historicalResults where id not in (select top (0 * 1) id from historicalResults WHERE userId = ? order by id desc) and userId = ? order by id desc 
+2022-01-14 14:12:33,132 [http-nio-8088-exec-9] ==> Parameters: 6(Long), 6(Long)
+2022-01-14 14:12:33,178 [http-nio-8088-exec-9] <==      Total: 1
+2022-01-14 14:12:54,065 [http-nio-8088-exec-8] ==>  Preparing: select count(1) from historicalResults WHERE userId = ? 
+2022-01-14 14:12:54,067 [http-nio-8088-exec-8] ==> Parameters: 6(Long)
+2022-01-14 14:12:54,085 [http-nio-8088-exec-8] <==      Total: 1
+2022-01-14 14:12:54,103 [http-nio-8088-exec-8] ==>  Preparing: select top 1 * from historicalResults where id not in (select top (0 * 1) id from historicalResults WHERE userId = ? order by id desc) and userId = ? order by id desc 
+2022-01-14 14:12:54,107 [http-nio-8088-exec-8] ==> Parameters: 6(Long), 6(Long)
+2022-01-14 14:12:54,219 [http-nio-8088-exec-8] <==      Total: 1
+2022-01-14 14:17:20,620 [http-nio-8088-exec-1] ==>  Preparing: select count(1) from historicalResults WHERE userId = ? 
+2022-01-14 14:17:20,876 [http-nio-8088-exec-1] ==> Parameters: 6(String)
+2022-01-14 14:17:21,104 [http-nio-8088-exec-1] <==      Total: 1
+2022-01-14 14:17:21,209 [http-nio-8088-exec-1] ==>  Preparing: select top 1 * from historicalResults where id not in (select top (0 * 1) id from historicalResults WHERE userId = ? order by id desc) and userId = ? order by id desc 
+2022-01-14 14:17:21,212 [http-nio-8088-exec-1] ==> Parameters: 6(String), 6(String)
+2022-01-14 14:17:21,254 [http-nio-8088-exec-1] <==      Total: 1
+2022-01-14 14:17:46,429 [http-nio-8088-exec-2] ==>  Preparing: select count(1) from historicalResults 
+2022-01-14 14:17:46,433 [http-nio-8088-exec-2] ==> Parameters: 
+2022-01-14 14:17:46,539 [http-nio-8088-exec-2] <==      Total: 1
+2022-01-14 14:17:46,637 [http-nio-8088-exec-2] ==>  Preparing: select top 1 * from historicalResults where id not in (select top (0 * 1) id from historicalResults order by id desc) order by id desc 
+2022-01-14 14:17:46,639 [http-nio-8088-exec-2] ==> Parameters: 
+2022-01-14 14:17:46,673 [http-nio-8088-exec-2] <==      Total: 1
+2022-01-14 14:18:29,961 [http-nio-8088-exec-3] ==>  Preparing: select count(1) from historicalResults WHERE userId = ? 
+2022-01-14 14:18:29,970 [http-nio-8088-exec-3] ==> Parameters: 6(String)
+2022-01-14 14:18:30,250 [http-nio-8088-exec-3] <==      Total: 1
+2022-01-14 14:18:30,488 [http-nio-8088-exec-3] ==>  Preparing: select top 1 * from historicalResults where id not in (select top (0 * 1) id from historicalResults WHERE userId = ? order by id desc) and userId = ? order by id desc 
+2022-01-14 14:18:30,492 [http-nio-8088-exec-3] ==> Parameters: 6(String), 6(String)
+2022-01-14 14:18:30,506 [http-nio-8088-exec-3] <==      Total: 1
+2022-01-14 17:12:33,725 [http-nio-8088-exec-1] ==>  Preparing: select * from sys_user where username = ? 
+2022-01-14 17:12:33,983 [http-nio-8088-exec-1] ==> Parameters: 1144203767@qq.com(String)
+2022-01-14 17:12:34,143 [http-nio-8088-exec-1] <==      Total: 1
+2022-01-14 17:12:34,325 [http-nio-8088-exec-1] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2022-01-14 17:12:34,329 [http-nio-8088-exec-1] ==> Parameters: 6(Long)
+2022-01-14 17:12:34,346 [http-nio-8088-exec-1] <==      Total: 0
+2022-01-14 17:12:35,773 [http-nio-8088-exec-1] ==>  Preparing: update sys_user SET allowAt = ?, errorNum = ? where id = ? 
+2022-01-14 17:12:35,784 [http-nio-8088-exec-1] ==> Parameters: 2022-01-14 17:12:34.792(Timestamp), 0(Integer), 6(Long)
+2022-01-14 17:12:35,871 [http-nio-8088-exec-1] <==    Updates: 1
+2022-01-14 17:12:45,611 [http-nio-8088-exec-1] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-14 17:12:45,637 [http-nio-8088-exec-1] ==> Parameters: 6(Long), 登陆(String), true(Boolean), null
+2022-01-14 17:12:45,745 [http-nio-8088-exec-1] <==    Updates: 1
+2022-01-14 17:15:13,512 [http-nio-8088-exec-4] ==>  Preparing: select count(1) from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? 
+2022-01-14 17:15:13,519 [http-nio-8088-exec-4] ==> Parameters: 1144203767@qq.com(String)
+2022-01-14 17:15:13,555 [http-nio-8088-exec-4] <==      Total: 1
+2022-01-14 17:16:00,504 [http-nio-8088-exec-5] ==>  Preparing: select count(1) from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? 
+2022-01-14 17:16:00,506 [http-nio-8088-exec-5] ==> Parameters: 1144203767@qq.com(String)
+2022-01-14 17:16:00,544 [http-nio-8088-exec-5] <==      Total: 1
+2022-01-14 17:16:34,481 [http-nio-8088-exec-10] ==>  Preparing: select count(1) from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? 
+2022-01-14 17:16:34,486 [http-nio-8088-exec-10] ==> Parameters: 1144203767@qq.com(String)
+2022-01-14 17:16:34,491 [http-nio-8088-exec-10] <==      Total: 1
+2022-01-14 17:19:46,765 [http-nio-8088-exec-8] ==>  Preparing: select * from sys_user where username = ? 
+2022-01-14 17:19:46,767 [http-nio-8088-exec-8] ==> Parameters: 282427162@qq.com(String)
+2022-01-14 17:19:46,783 [http-nio-8088-exec-8] <==      Total: 1
+2022-01-14 17:19:46,804 [http-nio-8088-exec-8] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2022-01-14 17:19:46,806 [http-nio-8088-exec-8] ==> Parameters: 5(Long)
+2022-01-14 17:19:46,816 [http-nio-8088-exec-8] <==      Total: 0
+2022-01-14 17:19:47,235 [http-nio-8088-exec-8] ==>  Preparing: update sys_user SET allowAt = ?, errorNum = ? where id = ? 
+2022-01-14 17:19:47,242 [http-nio-8088-exec-8] ==> Parameters: 2022-01-14 17:19:47.219(Timestamp), 0(Integer), 5(Long)
+2022-01-14 17:19:47,271 [http-nio-8088-exec-8] <==    Updates: 1
+2022-01-14 17:19:47,302 [http-nio-8088-exec-8] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-14 17:19:47,303 [http-nio-8088-exec-8] ==> Parameters: 5(Long), 登陆(String), true(Boolean), null
+2022-01-14 17:19:47,356 [http-nio-8088-exec-8] <==    Updates: 1
+2022-01-14 17:20:04,611 [http-nio-8088-exec-7] ==>  Preparing: select count(1) from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? 
+2022-01-14 17:20:04,613 [http-nio-8088-exec-7] ==> Parameters: 282427162@qq.com(String)
+2022-01-14 17:20:04,648 [http-nio-8088-exec-7] <==      Total: 1
+2022-01-14 17:20:04,728 [http-nio-8088-exec-7] ==>  Preparing: select top 10 a.id, a.dateTime, a.state,a.downloadLink1, a.downloadLink2,b.username,a.type from uploadRecord a inner join sys_user b on a.userId = b.id where a.id not in (select top (0 * 10) id from uploadRecord order by id) and username = ? order by a.dateTime desc 
+2022-01-14 17:20:04,730 [http-nio-8088-exec-7] ==> Parameters: 282427162@qq.com(String)
+2022-01-14 17:20:05,360 [http-nio-8088-exec-7] <==      Total: 10
+2022-01-14 17:22:14,698 [http-nio-8088-exec-1] ==>  Preparing: select count(1) from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? 
+2022-01-14 17:22:14,700 [http-nio-8088-exec-1] ==> Parameters: 282427162@qq.com(String)
+2022-01-14 17:22:14,737 [http-nio-8088-exec-1] <==      Total: 1
+2022-01-14 17:22:14,832 [http-nio-8088-exec-1] ==>  Preparing: select top 5 a.id, a.dateTime, a.state,a.downloadLink1, a.downloadLink2,b.username,a.type from uploadRecord a inner join sys_user b on a.userId = b.id where a.id not in (select top (0 * 5) id from uploadRecord order by id) and username = ? order by a.dateTime desc 
+2022-01-14 17:22:14,834 [http-nio-8088-exec-1] ==> Parameters: 282427162@qq.com(String)
+2022-01-14 17:22:14,979 [http-nio-8088-exec-1] <==      Total: 5
+2022-01-14 17:36:13,755 [http-nio-8088-exec-10] ==>  Preparing: select count(1) from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? 
+2022-01-14 17:36:14,278 [http-nio-8088-exec-10] ==> Parameters: 282427162@qq.com(String)
+2022-01-14 17:36:14,697 [http-nio-8088-exec-10] <==      Total: 1
+2022-01-14 17:36:15,074 [http-nio-8088-exec-10] ==>  Preparing: select top 5 a.id, a.dateTime, a.state,a.downloadLink1, a.downloadLink2,b.username,a.type from uploadRecord a inner join sys_user b on a.userId = b.id where a.id not in (select top (0 * 5) id from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? order by id desc) and username = ? order by a.id desc 
+2022-01-14 17:36:15,076 [http-nio-8088-exec-10] ==> Parameters: 282427162@qq.com(String), 282427162@qq.com(String)
+2022-01-14 17:39:48,722 [http-nio-8088-exec-10] ==>  Preparing: select count(1) from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? 
+2022-01-14 17:39:49,338 [http-nio-8088-exec-10] ==> Parameters: 282427162@qq.com(String)
+2022-01-14 17:39:49,727 [http-nio-8088-exec-10] <==      Total: 1
+2022-01-14 17:39:50,313 [http-nio-8088-exec-10] ==>  Preparing: select top 5 a.id, a.dateTime, a.state,a.downloadLink1, a.downloadLink2,b.username,a.type from uploadRecord a inner join sys_user b on a.userId = b.id where a.id not in (select top (0 * 5) id from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? order by a.id desc) and username = ? order by a.id desc 
+2022-01-14 17:39:50,317 [http-nio-8088-exec-10] ==> Parameters: 282427162@qq.com(String), 282427162@qq.com(String)
+2022-01-14 17:42:00,587 [http-nio-8088-exec-10] ==>  Preparing: select count(1) from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? 
+2022-01-14 17:42:00,828 [http-nio-8088-exec-10] ==> Parameters: 282427162@qq.com(String)
+2022-01-14 17:42:00,991 [http-nio-8088-exec-10] <==      Total: 1
+2022-01-14 17:42:01,094 [http-nio-8088-exec-10] ==>  Preparing: select top 5 a.id, a.dateTime, a.state,a.downloadLink1, a.downloadLink2,b.username,a.type from uploadRecord a inner join sys_user b on a.userId = b.id where a.id not in (select top (0 * 5) a.id from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? order by a.id desc) and username = ? order by a.id desc 
+2022-01-14 17:42:01,099 [http-nio-8088-exec-10] ==> Parameters: 282427162@qq.com(String), 282427162@qq.com(String)
+2022-01-14 17:42:01,162 [http-nio-8088-exec-10] <==      Total: 5
+2022-01-14 17:42:37,368 [http-nio-8088-exec-9] ==>  Preparing: select count(1) from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? 
+2022-01-14 17:42:37,375 [http-nio-8088-exec-9] ==> Parameters: 282427162@qq.com(String)
+2022-01-14 17:42:37,427 [http-nio-8088-exec-9] <==      Total: 1
+2022-01-14 17:42:37,442 [http-nio-8088-exec-9] ==>  Preparing: select top 5 a.id, a.dateTime, a.state,a.downloadLink1, a.downloadLink2,b.username,a.type from uploadRecord a inner join sys_user b on a.userId = b.id where a.id not in (select top (1 * 5) a.id from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? order by a.id desc) and username = ? order by a.id desc 
+2022-01-14 17:42:37,447 [http-nio-8088-exec-9] ==> Parameters: 282427162@qq.com(String), 282427162@qq.com(String)
+2022-01-14 17:42:37,588 [http-nio-8088-exec-9] <==      Total: 5
+2022-01-14 17:42:53,131 [http-nio-8088-exec-8] ==>  Preparing: select count(1) from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? 
+2022-01-14 17:42:53,135 [http-nio-8088-exec-8] ==> Parameters: 282427162@qq.com(String)
+2022-01-14 17:42:53,145 [http-nio-8088-exec-8] <==      Total: 1
+2022-01-14 17:42:53,151 [http-nio-8088-exec-8] ==>  Preparing: select top 5 a.id, a.dateTime, a.state,a.downloadLink1, a.downloadLink2,b.username,a.type from uploadRecord a inner join sys_user b on a.userId = b.id where a.id not in (select top (2 * 5) a.id from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? order by a.id desc) and username = ? order by a.id desc 
+2022-01-14 17:42:53,154 [http-nio-8088-exec-8] ==> Parameters: 282427162@qq.com(String), 282427162@qq.com(String)
+2022-01-14 17:42:53,211 [http-nio-8088-exec-8] <==      Total: 3
+2022-01-14 17:43:04,980 [http-nio-8088-exec-7] ==>  Preparing: select count(1) from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? 
+2022-01-14 17:43:04,983 [http-nio-8088-exec-7] ==> Parameters: 282427162@qq.com(String)
+2022-01-14 17:43:04,989 [http-nio-8088-exec-7] <==      Total: 1
+2022-01-14 17:43:05,002 [http-nio-8088-exec-7] ==>  Preparing: select top 5 a.id, a.dateTime, a.state,a.downloadLink1, a.downloadLink2,b.username,a.type from uploadRecord a inner join sys_user b on a.userId = b.id where a.id not in (select top (3 * 5) a.id from uploadRecord a inner join sys_user b on a.userId = b.id WHERE username = ? order by a.id desc) and username = ? order by a.id desc 
+2022-01-14 17:43:05,004 [http-nio-8088-exec-7] ==> Parameters: 282427162@qq.com(String), 282427162@qq.com(String)
+2022-01-14 17:43:05,081 [http-nio-8088-exec-7] <==      Total: 0

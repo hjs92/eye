@@ -1,0 +1,80 @@
+server:
+  port: 8088
+  tomcat:
+    basedir: /tmp/tomcat
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databasename=eye
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    username: sa
+    password: yymes+2021
+    druid:
+      initialSize: 5
+      minIdle: 5
+      maxActive: 20
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 1
+      testWhileIdle: true
+      testOnBorrow: true
+      testOnReturn: false
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat
+      connectionProperties: druid.stat.mergeSql=false;druid.stat.slowSqlMillis=5000
+      stat-view-servlet:
+        allow: 127.0.0.1
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    joda-date-time-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  redis:
+    host: 127.0.0.1
+    password: yymes+2021
+    port: 6333
+    timeout: 10s
+    lettuce:
+      pool:
+        min-idle: 0
+        max-idle: 8
+        max-active: 8
+        max-wait: -1ms
+  mail:
+    default-encoding: UTF-8
+    host: smtp.mxhichina.com
+    port: 25
+    username: ai@jsiec.org
+    password: dsjsys@2021
+    protocol: smtp
+    test-connection: false
+    properties:
+      mail.smtp.auth: true
+    subject: 审核结果通知
+    pass: <p>审核通过！</p>
+    no-pass: 审核不通过！
+mybatis:
+  type-aliases-package: com.yunyangit.eye.model
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+files:
+  path: ${file-path:d:/files}
+swagger:
+  enabled: true
+logging:
+  config: classpath:logback-admin.xml
+log:
+  level:
+    root: info
+    my: debug
+  file: logs/admin-server.log
+  maxsize: 30MB
+token:
+  expire:
+    seconds: 7200
+  jwtSecret: (XIAO:)_$^11244^%$_(WEI:)_@@++--(LAO:)_++++_.sds_(SHI:)

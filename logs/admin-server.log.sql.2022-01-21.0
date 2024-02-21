@@ -1,0 +1,63 @@
+2022-01-21 10:21:53,144 [http-nio-8088-exec-3] ==>  Preparing: select * from sys_user where username = ? 
+2022-01-21 10:21:53,396 [http-nio-8088-exec-3] ==> Parameters: admin(String)
+2022-01-21 10:21:53,634 [http-nio-8088-exec-3] <==      Total: 1
+2022-01-21 10:21:53,816 [http-nio-8088-exec-3] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2022-01-21 10:21:53,819 [http-nio-8088-exec-3] ==> Parameters: 1(Long)
+2022-01-21 10:21:54,633 [http-nio-8088-exec-3] <==      Total: 1
+2022-01-21 10:21:55,360 [http-nio-8088-exec-3] ==>  Preparing: update sys_user SET allowAt = ?, errorNum = ? where id = ? 
+2022-01-21 10:21:55,367 [http-nio-8088-exec-3] ==> Parameters: 2022-01-21 10:21:55.046(Timestamp), 0(Integer), 1(Long)
+2022-01-21 10:21:55,483 [http-nio-8088-exec-3] <==    Updates: 1
+2022-01-21 10:22:09,885 [http-nio-8088-exec-3] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-21 10:22:09,910 [http-nio-8088-exec-3] ==> Parameters: 1(Long), 登陆(String), true(Boolean), null
+2022-01-21 10:22:10,194 [http-nio-8088-exec-3] <==    Updates: 1
+2022-01-21 10:23:18,829 [http-nio-8088-exec-9] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-21 10:23:18,842 [http-nio-8088-exec-9] ==> Parameters: 1(Long), 删除用户(String), true(Boolean), (String)
+2022-01-21 10:23:18,897 [http-nio-8088-exec-9] <==    Updates: 1
+2022-01-21 10:33:54,105 [http-nio-8088-exec-7] ==>  Preparing: select * from sys_user where username = ? 
+2022-01-21 10:33:54,713 [http-nio-8088-exec-7] ==> Parameters: admin(String)
+2022-01-21 10:33:55,117 [http-nio-8088-exec-7] <==      Total: 1
+2022-01-21 10:33:55,448 [http-nio-8088-exec-7] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2022-01-21 10:33:55,454 [http-nio-8088-exec-7] ==> Parameters: 1(Long)
+2022-01-21 10:33:55,716 [http-nio-8088-exec-7] <==      Total: 1
+2022-01-21 10:33:58,864 [http-nio-8088-exec-7] ==>  Preparing: update sys_user SET allowAt = ?, errorNum = ? where id = ? 
+2022-01-21 10:33:58,871 [http-nio-8088-exec-7] ==> Parameters: 2022-01-21 10:33:56.588(Timestamp), 0(Integer), 1(Long)
+2022-01-21 10:33:59,743 [http-nio-8088-exec-7] <==    Updates: 1
+2022-01-21 10:34:18,480 [http-nio-8088-exec-7] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-21 10:34:18,520 [http-nio-8088-exec-7] ==> Parameters: 1(Long), 登陆(String), true(Boolean), null
+2022-01-21 10:34:18,749 [http-nio-8088-exec-7] <==    Updates: 1
+2022-01-21 10:34:20,879 [http-nio-8088-exec-6] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-21 10:34:20,889 [http-nio-8088-exec-6] ==> Parameters: 1(Long), 删除用户(String), true(Boolean), (String)
+2022-01-21 10:34:21,277 [http-nio-8088-exec-6] <==    Updates: 1
+2022-01-21 10:51:59,233 [http-nio-8088-exec-9] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-21 10:51:59,852 [http-nio-8088-exec-9] ==> Parameters: 1(Long), 删除用户(String), true(Boolean), (String)
+2022-01-21 10:51:59,970 [http-nio-8088-exec-9] <==    Updates: 1
+2022-01-21 10:58:04,221 [http-nio-8088-exec-1] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-21 10:58:04,539 [http-nio-8088-exec-1] ==> Parameters: 1(Long), 删除用户(String), true(Boolean), (String)
+2022-01-21 10:58:04,560 [http-nio-8088-exec-1] <==    Updates: 1
+2022-01-21 11:02:47,252 [http-nio-8088-exec-10] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-21 11:02:47,687 [http-nio-8088-exec-10] ==> Parameters: 1(Long), 删除用户(String), true(Boolean), (String)
+2022-01-21 11:02:47,729 [http-nio-8088-exec-10] <==    Updates: 1
+2022-01-21 11:06:46,162 [http-nio-8088-exec-10] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-21 11:06:46,571 [http-nio-8088-exec-10] ==> Parameters: 1(Long), 删除用户(String), true(Boolean), (String)
+2022-01-21 11:06:46,603 [http-nio-8088-exec-10] <==    Updates: 1
+2022-01-21 11:39:40,057 [http-nio-8088-exec-1] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-21 11:39:40,426 [http-nio-8088-exec-1] ==> Parameters: 1(Long), 删除用户(String), true(Boolean), (String)
+2022-01-21 11:39:40,488 [http-nio-8088-exec-1] <==    Updates: 1
+2022-01-21 14:28:32,041 [http-nio-8088-exec-1] ==>  Preparing: select * from sys_user where username = ? 
+2022-01-21 14:28:32,232 [http-nio-8088-exec-1] ==> Parameters: admin(String)
+2022-01-21 14:28:32,390 [http-nio-8088-exec-1] <==      Total: 1
+2022-01-21 14:28:32,564 [http-nio-8088-exec-1] ==>  Preparing: select distinct p.* from sys_permission p inner join sys_role_permission rp on p.id = rp.permissionId inner join sys_role_user ru on ru.roleId = rp.roleId where ru.userId = ? order by p.sort 
+2022-01-21 14:28:32,571 [http-nio-8088-exec-1] ==> Parameters: 1(Long)
+2022-01-21 14:28:32,629 [http-nio-8088-exec-1] <==      Total: 1
+2022-01-21 14:28:34,162 [http-nio-8088-exec-1] ==>  Preparing: update sys_user SET allowAt = ?, errorNum = ? where id = ? 
+2022-01-21 14:28:34,170 [http-nio-8088-exec-1] ==> Parameters: 2022-01-21 14:28:33.347(Timestamp), 0(Integer), 1(Long)
+2022-01-21 14:28:34,444 [http-nio-8088-exec-1] <==    Updates: 1
+2022-01-21 14:28:48,681 [http-nio-8088-exec-1] ==>  Preparing: insert into sys_logs(userId,module, flag, remark, createTime) values(?, ?, ?, ?, getdate()) 
+2022-01-21 14:28:48,717 [http-nio-8088-exec-1] ==> Parameters: 1(Long), 登陆(String), true(Boolean), null
+2022-01-21 14:28:48,826 [http-nio-8088-exec-1] <==    Updates: 1
+2022-01-21 14:30:03,737 [http-nio-8088-exec-3] ==>  Preparing: select count(1) from sys_logs t left join sys_user u on u.id = t.userId 
+2022-01-21 14:30:03,751 [http-nio-8088-exec-3] ==> Parameters: 
+2022-01-21 14:30:04,041 [http-nio-8088-exec-3] <==      Total: 1
+2022-01-21 14:30:04,192 [http-nio-8088-exec-3] ==>  Preparing: select top 5 t.*, u.username from sys_logs t left join sys_user u on u.id = t.userId where t.id not in (select top (0 * 5) id from sys_logs order by id desc) order by id desc 
+2022-01-21 14:30:04,195 [http-nio-8088-exec-3] ==> Parameters: 
+2022-01-21 14:30:04,560 [http-nio-8088-exec-3] <==      Total: 5
